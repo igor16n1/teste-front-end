@@ -36,5 +36,3 @@ Essa tela deve ter um botão para voltar para resultados da busca.
 - Lógica do código
 - Uso do Git
 - Testes automatizados
-
-TESTE
