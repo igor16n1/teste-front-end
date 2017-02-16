@@ -1,0 +1,49 @@
+.procurarBox {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top:0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    margin: auto;
+}
+
+.procurarBoxAnimacao{
+    animation:procurarBoxAnim 1s;
+    -moz-animation:procurarBoxAnim 1s; /* Firefox */
+    -webkit-animation:procurarBoxAnim 1s; /* Safari and Chrome */
+    animation-fill-mode: forwards;
+}
+
+@keyframes procurarBoxAnim
+{
+    to{top:-50%;} 
+}
+@-moz-keyframes procurarBoxAnim
+{
+    to{top:-50%;} 
+}
+@-webkit-keyframes procurarBoxAnim
+{
+    to{top:-50%;} 
+}
+
+.container {
+  display: -webkit-flex;
+  display: flex;
+}
+.flex1 {
+  -webkit-flex: 1;
+          flex: 1;
+}
+.flex2 {
+  -webkit-flex: 2;
+          flex: 2;
+}
+.procurarInput{
+    height: 20px;
+}
+.procurarBtn{
+    height: 25px;
+}

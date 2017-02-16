@@ -7,22 +7,34 @@ Teste iCasei
         <title>Teste iCasei</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="js/angular.js"></script>
+        <script src = "JS/angular.js"></script>
+        <script src = "JS/iCaseiController.js"></script>
+        <script src = "JS/dirPagination.js"></script>
+        <script src = "JS/jquery-3.1.1.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/iCasei.css">
     </head>
-    <body ng-app = "iCasei">
-      
-      <div ng-controller = "HelloController" >
-         <h2>Welcome {{helloTo.title}} to the world of Tutorialspoint!</h2>
-      </div>
-      
-      <script>
-         angular.module("iCasei", [])
-         
-         .controller("HelloController", function($scope) {
-            $scope.helloTo = {};
-            $scope.helloTo.title = "AngularJS";
-         });
-      </script>
-      
-   </body>
+    <body>
+        <div ng-app = "mainApp" ng-controller = "iCaseiController">
+            <div class="procurarBox container">
+                <input class="flex1 procurarInput" type="text" ng-model="procurar.nomefilme" placeholder="{{procurar.placeholderProcurar}}" />
+                <button class="flex2 procurarBtn" ng-click="procurar.ConsultarFilme(procurar.nomefilme)">Buscar</button>
+            </div>
+            
+            
+           
+
+            <div ng-show="mostrarListaFilmes">
+                <table>
+                    <tr dir-paginate="x in filmesLista | itemsPerPage: procurar.pageSize">
+                        <td><img src={{x.Poster}} alt={{x.Title}} style="width:50%;height:50%;"></td>
+                        <td><button ng-click="procurar.ChamarFilmeDetalhe(x.imdbID)">Detalhe</button></td>
+                    </tr>
+                </table>
+            </div>
+            <dir-pagination-controls boundary-links="true" on-page-change="" template-url="dirPagination.html"></dir-pagination-controls>
+            
+            
+            
+       </div>
+    </body>
 </html>
