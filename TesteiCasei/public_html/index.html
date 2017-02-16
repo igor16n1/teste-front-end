@@ -8,6 +8,7 @@ Teste iCasei
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src = "JS/angular.js"></script>
+        <script src="JS/angular-route.js"></script>
         <script src = "JS/iCaseiController.js"></script>
         <script src = "JS/dirPagination.js"></script>
         <script src = "JS/jquery-3.1.1.js"></script>
@@ -17,24 +18,22 @@ Teste iCasei
         <div ng-app = "mainApp" ng-controller = "iCaseiController">
             <div class="procurarBox container">
                 <input class="flex1 procurarInput" type="text" ng-model="procurar.nomefilme" placeholder="{{procurar.placeholderProcurar}}" />
-                <button class="flex2 procurarBtn" ng-click="procurar.ConsultarFilme(procurar.nomefilme)">Buscar</button>
+                <button  class="flex2 procurarBtn" ng-click="procurar.ConsultarFilme(procurar.nomefilme)">Buscar</button>
             </div>
-            
-            
-           
-
-            <div ng-show="mostrarListaFilmes">
+           <div ng-show="mostrarListaFilmes">
                 <table>
                     <tr dir-paginate="x in filmesLista | itemsPerPage: procurar.pageSize">
                         <td><img src={{x.Poster}} alt={{x.Title}} style="width:50%;height:50%;"></td>
                         <td><button ng-click="procurar.ChamarFilmeDetalhe(x.imdbID)">Detalhe</button></td>
                     </tr>
                 </table>
+                <dir-pagination-controls boundary-links="true" on-page-change="" template-url="dirPagination.html"></dir-pagination-controls>
             </div>
-            <dir-pagination-controls boundary-links="true" on-page-change="" template-url="dirPagination.html"></dir-pagination-controls>
-            
-            
-            
+            <div ng-show="mostrarDetalhes">
+                <div ng-view >
+                </div>
+                <button ng-click="procurar.VoltarConsultaFilme()">Voltar</button>
+            </div>
        </div>
     </body>
 </html>
