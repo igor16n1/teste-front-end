@@ -28,15 +28,10 @@ mainApp.controller("iCaseiController",  function($scope, $http, $location) {
             }).then(function(response) {
                 if(response.data.Response)
                 {
-                    
                     MoverCaixaProcurarFilme();
-  
                     $scope.mostrarListaFilmes= true;
                     procurar.mostrarListaFilmes = $scope.mostrarListaFilmes;
-                    
                     $scope.filmesLista = response.data.Search;
-                    console.log($scope.filmesLista);
-
                     $location.path('Detalhes.html');
                 }
                 else

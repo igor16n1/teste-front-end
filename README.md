@@ -9,10 +9,10 @@ Desenvolver uma aplicação HTML5
 
 ## Especificações tecnicas
 - Utilizar diretrizes do [Google Material Design](https://www.google.com/design/spec/material-design/introduction.html)
-- Utilizar a [OMDb API](http://www.omdbapi.com)
-- Mobile first e responsivo
-- Usar framework JS (AngularJS, Backbone, Knockout)
 - Cores livres, layout livre, imagens livres (fora os posters)
+- Mobile first e responsivo
+- Utilizar a [OMDb API](http://www.omdbapi.com)
+- Usar framework JS (AngularJS, Backbone, Knockout)
 - Gitflow
 - Testes automatizados
 
@@ -27,7 +27,8 @@ A lista de filmes deve mostrar apenas o poster do filme e um botão para ver o d
 ### Tela de detalhes
 A partir do imdbID retornado na outra chamada, deve ser feito uma chamada para http://www.omdbapi.com/?i={imbd_id}.
 
-A partir desse retorno, deve-se montar uma tela onde apareçam as informações Title, Year, Rated, Genre, Director, Writer, Actors, Plot, Language, Country, Awards, Poster, Type.
+A partir desse retorno, deve-se montar uma tela onde apareçam as informações 
+Title, Year, Rated, Genre, Director, Writer, Actors, Plot, Language, Country, Awards, Poster, Type.
 
 Essa tela deve ter um botão para voltar para resultados da busca.
 

@@ -12,19 +12,23 @@ Teste iCasei
         <script src = "JS/iCaseiController.js"></script>
         <script src = "JS/dirPagination.js"></script>
         <script src = "JS/jquery-3.1.1.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/iCasei.css">
     </head>
     <body>
+       <div id="boxBase">
+        </div>
         <div ng-app = "mainApp" ng-controller = "iCaseiController">
             <div class="procurarBox container">
-                <input class="flex1 procurarInput" type="text" ng-model="procurar.nomefilme" placeholder="{{procurar.placeholderProcurar}}" />
-                <button  class="flex2 procurarBtn" ng-click="procurar.ConsultarFilme(procurar.nomefilme)">Buscar</button>
+                <input class="flex1 procurarInput Noto procurarInput" type="text" ng-model="procurar.nomefilme" placeholder="{{procurar.placeholderProcurar}}" />
+                <button class="flex2 procurarBtn Noto btnBuscar" ng-click="procurar.ConsultarFilme(procurar.nomefilme)">Buscar</button>
             </div>
-           <div ng-show="mostrarListaFilmes">
+            <div ng-show="mostrarListaFilmes" class="listaFilmesGrupo">
                 <table>
-                    <tr dir-paginate="x in filmesLista | itemsPerPage: procurar.pageSize">
-                        <td><img src={{x.Poster}} alt={{x.Title}} style="width:50%;height:50%;"></td>
-                        <td><button ng-click="procurar.ChamarFilmeDetalhe(x.imdbID)">Detalhe</button></td>
+                    <tr class="listaFilmes" dir-paginate="x in filmesLista | itemsPerPage: procurar.pageSize">
+                        <td><img src={{x.Poster}} alt={{x.Title}} class="poster"><br>
+                        <button class="btnDetalhes Roboto" ng-click="procurar.ChamarFilmeDetalhe(x.imdbID)">Detalhe</button></td>
                     </tr>
                 </table>
                 <dir-pagination-controls boundary-links="true" on-page-change="" template-url="dirPagination.html"></dir-pagination-controls>
@@ -32,8 +36,9 @@ Teste iCasei
             <div ng-show="mostrarDetalhes">
                 <div ng-view >
                 </div>
-                <button ng-click="procurar.VoltarConsultaFilme()">Voltar</button>
+                <button class="detalheBtnVoltar" ng-click="procurar.VoltarConsultaFilme()">Voltar</button>
             </div>
        </div>
+         
     </body>
 </html>

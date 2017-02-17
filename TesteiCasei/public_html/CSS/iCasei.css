@@ -1,11 +1,11 @@
 .procurarBox {
-    width: 100px;
+    width: 500px;
     height: 100px;
     position: absolute;
     top:0%;
     bottom: 0%;
-    left: 0%;
-    right: 0%;
+    left: 10%;
+    right: 10%;
     margin: auto;
 }
 
@@ -34,16 +34,213 @@
   display: flex;
 }
 .flex1 {
-  -webkit-flex: 1;
-          flex: 1;
+  -webkit-flex: 7;
+          flex: 7;
 }
 .flex2 {
-  -webkit-flex: 2;
-          flex: 2;
+  -webkit-flex: 1;
+          flex: 1;
 }
 .procurarInput{
     height: 20px;
 }
 .procurarBtn{
     height: 25px;
+}
+
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 480px) {
+    .col-xs-1 {width: 8.33%;}
+    .col-xs-2 {width: 16.66%;}
+    .col-xs-3 {width: 25%;}
+    .col-xs-4 {width: 33.33%;}
+    .col-xs-5 {width: 41.66%;}
+    .col-xs-6 {width: 50%;}
+    .col-xs-7 {width: 58.33%;}
+    .col-xs-8 {width: 66.66%;}
+    .col-xs-9 {width: 75%;}
+    .col-xs-10 {width: 83.33%;}
+    .col-xs-11 {width: 91.66%;}
+    .col-xs-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+    .col-sm-1 {width: 8.33%;}
+    .col-sm-2 {width: 16.66%;}
+    .col-sm-3 {width: 25%;}
+    .col-sm-4 {width: 33.33%;}
+    .col-sm-5 {width: 41.66%;}
+    .col-sm-6 {width: 50%;}
+    .col-sm-7 {width: 58.33%;}
+    .col-sm-8 {width: 66.66%;}
+    .col-sm-9 {width: 75%;}
+    .col-sm-10 {width: 83.33%;}
+    .col-sm-11 {width: 91.66%;}
+    .col-sm-12 {width: 100%;}
+}
+@media only screen and (min-width: 980px) {
+    .col-md-1 {width: 8.33%;}
+    .col-md-2 {width: 16.66%;}
+    .col-md-3 {width: 25%;}
+    .col-md-4 {width: 33.33%;}
+    .col-md-5 {width: 41.66%;}
+    .col-md-6 {width: 50%;}
+    .col-md-7 {width: 58.33%;}
+    .col-md-8 {width: 66.66%;}
+    .col-md-9 {width: 75%;}
+    .col-md-10 {width: 83.33%;}
+    .col-md-11 {width: 91.66%;}
+    .col-md-12 {width: 100%;}
+}
+@media only screen and (min-width: 1200px) {
+    .col-lg-1 {width: 8.33%;}
+    .col-lg-2 {width: 16.66%;}
+    .col-lg-3 {width: 25%;}
+    .col-lg-4 {width: 33.33%;}
+    .col-lg-5 {width: 41.66%;}
+    .col-lg-6 {width: 50%;}
+    .col-lg-7 {width: 58.33%;}
+    .col-lg-8 {width: 66.66%;}
+    .col-lg-9 {width: 75%;}
+    .col-lg-10 {width: 83.33%;}
+    .col-lg-11 {width: 91.66%;}
+    .col-lg-12 {width: 100%;}
+    .paginacaoGrupo{
+        position: absolute;
+        top: 70%;
+        left: 40%;
+        right: 40%;
+    }
+}
+.poster{
+    width:233px;
+    height:300px;
+}
+.listaFilmes{
+    display: inline-block;
+}
+.listaFilmesGrupo{
+    position: absolute;
+    top:30%;
+    left: 10%;
+    right: 10%;
+    margin: auto;
+}
+.paginacaoItens{
+    display: inline-block !important;
+}
+.paginacaoGrupo{
+    position: absolute;
+    top: 110%;
+    left: 40%;
+    right: 30%;
+}
+.filmeDetalhe{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    right: 40%;
+}
+.detalheBtnVoltar{
+    position: absolute;
+    top: 30%;
+    right: 71%;
+    width: 100px;
+    height: 50px;
+    font-size: 120%;
+    background-color: #BDBDBD;
+    border: 0px solid white;
+    color: #424242;
+    box-shadow: 0px 1px 10px black;
+}
+html {
+    background-color: #B71C1C;
+}
+#boxBase{
+     height: 75%;
+     width: 100%;
+     background-color: #FAFAFA;
+     position: absolute;
+     top: 15%;
+     right: 0%;
+     box-shadow: 0px 8px 25px black;
+}
+.Roboto{
+    font-family: 'Roboto', sans-serif;
+}
+.Noto{
+    font-family: 'Noto Sans', sans-serif;
+}
+.procurarInput{
+    width: 100px;
+    height: 50px;
+    border: 0px solid white;
+    border-style: solid;
+    border-bottom: thick solid #B71C1C;
+    background-color: #FAFAFA;
+    font-size: 100%;
+    color: #B71C1C;
+}
+.btnBuscar{
+    height: 57px;
+    font-size: 100%;
+    background-color: #B71C1C;
+    border: 0px solid white;
+    color: #FAFAFA;
+}
+.btnDetalhes{
+    height: 57px;
+    width: 233px;
+    font-size: 180%;
+    background-color: #BDBDBD;
+    border: 0px solid white;
+    color: #424242;
+    box-shadow: 0px 1px 10px black;
+}
+.btnPaginacao{
+    width: 50px;
+    height: 50px;
+    font-size: 180%;
+    background-color: #BDBDBD;
+    border: 0px solid white;
+    color: #424242;
+    box-shadow: 0px 1px 10px black;
+}
+.btnPaginacaoFonte{
+    color: #424242;
+}
+a {
+    text-decoration: none;
+}
+.detalheTitulo{
+    font-family: 'Roboto', sans-serif;
+    font-size: 200%;
+    color: #424242;
+}
+.detalheAlinhamento{
+    display: inline-block;
+}
+.detalheGeral{
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+    color: #424242;
+}
+.infoPessoal{
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+    color: #424242;
+    position: absolute;
+     top: 15%;
+     right: -40%;
+     left: 55%;
+}
+.btnVoltar{
+    width: 50px;
+    height: 50px;
+    font-size: 180%;
+    background-color: #BDBDBD;
+    border: 0px solid white;
+    color: #424242;
+    box-shadow: 0px 1px 10px black;
 }

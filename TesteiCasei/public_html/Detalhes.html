@@ -1,15 +1,55 @@
-<ul>
-    <li>{{filmeDetalhe.Title}}</li>
-    <li>{{filmeDetalhe.Year}}</li>
-    <li>{{filmeDetalhe.Rated}}</li>
-    <li>{{filmeDetalhe.Genre}}</li>
-    <li>{{filmeDetalhe.Director}}</li>
-    <li>{{filmeDetalhe.Writer}}</li>
-    <li>{{filmeDetalhe.Actors}}</li>
-    <li>{{filmeDetalhe.Plot}}</li>
-    <li>{{filmeDetalhe.Language}}</li>
-    <li>{{filmeDetalhe.Country}}</li>
-    <li>{{filmeDetalhe.Awards}}</li>
-    <li><img src={{filmeDetalhe.Poster}} alt={{filmeDetalhe.Title}} style="width:10%;height:10%;"></li>
-    <li>{{filmeDetalhe.Type}}</li>
-</ul>
+<div class="filmeDetalhe">
+    <div>
+        <div class="detalheTitulo">
+            {{filmeDetalhe.Title}}
+        </div>
+        <div class="detalheGeral detalheAlinhamento">
+            {{filmeDetalhe.Year}} |
+        </div>
+        <div class="detalheGeral detalheAlinhamento">
+            {{filmeDetalhe.Rated}} |
+        </div>
+         <div class="detalheGeral detalheAlinhamento">
+            {{filmeDetalhe.Genre}} |
+        </div>
+         <div class="detalheGeral detalheAlinhamento">
+            {{filmeDetalhe.Language}} |
+        </div>
+        <div class="detalheGeral detalheAlinhamento">
+            {{filmeDetalhe.Type}} |
+        </div>
+        <div class="detalheGeral detalheAlinhamento">
+            {{filmeDetalhe.Language}} |
+        </div>
+        <div class="detalheGeral detalheAlinhamento">
+            {{filmeDetalhe.Country}}
+        </div>
+        <div>
+            <img src={{filmeDetalhe.Poster}} alt={{filmeDetalhe.Title}} style="width:50%;height:50%;">
+        </div>
+        
+    <div>
+    <div class="infoPessoal">
+        <div>
+            Diretor: {{filmeDetalhe.Director}}
+        </div>
+        <div>
+            Roteirista: {{filmeDetalhe.Writer}}
+        </div>
+        <div>
+            Elenco: {{filmeDetalhe.Actors}}
+        </div>
+    <div>
+    <br>
+    <div class="Roteiro">
+        <div>
+            Roteiro: {{filmeDetalhe.Plot}}
+        </div>
+    </div>
+    <br>
+    <div class="Premios">
+        <div>
+            Prêmios: {{filmeDetalhe.Awards}}
+        </div>
+    </div>
+</div>
